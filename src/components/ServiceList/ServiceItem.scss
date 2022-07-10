@@ -1,0 +1,21 @@
+.service-page-item{
+    cursor: pointer;
+    .service-img img{
+        border-radius: 24px;
+    }
+    .service-page-content{
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 16px;
+        position: relative;
+        width: 85%;
+        margin: -32px auto 0px auto;
+        padding: 12px 0px;
+        .service-item-icon{
+            max-width: 36px;
+        }
+        .service-item-name{
+            font-size: 16px;
+        }
+    }
+}
+

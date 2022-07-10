@@ -1,0 +1,114 @@
+:root{
+    --primary : #00B8CA;
+    --paragraph : #595959;
+    --footerBg : #F7F9FB;
+    --white: #ffffff;
+    --black : #000000;
+    --linear-gradient: linear-gradient(252.62deg, rgba(0, 184, 202, 0.92) 0%, rgba(0, 0, 0, 0.92) 100.06%);
+}
+body{
+    letter-spacing: 0.5px;
+}
+.heading h2{
+    font-weight: 700;
+    font-size: 36px;
+}
+.heading h6{
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 18px;
+}
+.heading h6::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+    display: inline-block;
+    margin-right: 12px;
+}
+.heading.both h6::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.heading.both-white h6::before {
+    background: white;
+}
+.heading.both-white h6::after {
+    background: white;
+}
+
+// Service page
+.services-page{
+    background: url('images/banner-pattern.png');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0px 50px 0px;
+    margin-top: -133px;
+}
+
+// Contact us
+.contact-us{
+    overflow: hidden;
+    padding-top: 200px;
+    margin-top: -160px;
+    .address-item{
+        border-bottom: 1px solid #E8E8E8;
+        .item-img{
+            background: var(--primary);
+            width: 56px;
+            height: 56px;
+            img{
+                width: 24px;
+            }
+        }
+    }
+    .contact-form-container{
+        .form-check .form-check-input {
+            width: 20px;
+            height: 20px;
+        }
+        textarea{
+            border-radius: 24px;
+            resize: none;
+        }
+        .form-control{
+            padding: 12px 15px;
+        }
+        .css-1s2u09g-control {
+            border-width: 1px !important;
+            min-height: 50px;
+            border-radius: 60px;
+        }
+        .css-319lph-ValueContainer {
+            padding: 0px 15px;
+        }
+        .css-1pahdxg-control {
+            border-color: #ced4da !important;
+            box-shadow: 0 0 0 0 !important;
+            border-width: 1px !important;
+            border-radius: 60px;
+            min-height: 50px;
+            &:hover {
+                border-radius: 60px;
+                border-color: #ced4da !important;
+                box-shadow: 0 0 0 0 !important;
+                border-width: 1px !important;
+            }
+        }
+    }
+    .contact-bg-color{
+        background: var(--footerBg);
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        z-index: -1;
+    }
+}

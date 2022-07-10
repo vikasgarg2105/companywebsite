@@ -1,0 +1,11 @@
+.gradient-button{
+    background: linear-gradient(180deg, #00B8CA 0%, rgba(0, 184, 202, 0) 100%);
+    border-radius: 48px;
+    padding: 11.5px 48px;
+    font-size: 18px;
+    font-weight: 500;
+    svg{
+        fill: #ffffff;
+        width: 20px;
+    }
+}
