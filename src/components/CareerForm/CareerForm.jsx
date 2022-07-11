@@ -65,7 +65,7 @@ const CareerForm = () => {
               placeholder="Message (Optional)"
             />
           </Form.Group>
-          <NormalButton buttonTitle="Apply Now" css="w-100" />
+          <NormalButton type="submit" buttonTitle="Apply Now" css="w-100" />
         </Form>
       </div>
     </>

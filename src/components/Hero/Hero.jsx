@@ -19,7 +19,7 @@ const Hero = () => {
                   Lorem Ipsum is simply dummy text of the printing and <br className="d-none d-md-block" />{" "}
                   typesetting industry.
                 </p>
-                <GradientButton text="Let's Connect" />
+                <GradientButton type="button" text="Let's Connect" />
               </div>
             </Col>
           </Row>

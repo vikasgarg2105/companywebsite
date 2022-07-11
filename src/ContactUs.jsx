@@ -10,10 +10,24 @@ import countryList from "react-select-country-list";
 const ContactUs = () => {
   document.title = "Contact Us";
   const [value, setValue] = useState("");
+  const [text, setText] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobileNumber: "",
+    country: "",
+    company: "",
+    workWithCompany: "",
+    message: "",
+  });
   const options = useMemo(() => countryList().getData(), []);
 
   const changeHandler = (value) => {
     setValue(value);
+  };
+  const handleChange = (e) => {
+    setText({ ...text, [e.target.name]: e.target.value });
+    console.log(text);
   };
   return (
     <>
@@ -71,6 +85,10 @@ const ContactUs = () => {
                             type="text"
                             className="rounded-pill"
                             placeholder="First Name"
+                            name="firstName"
+                            onChange={handleChange}
+                            value={text.firstName}
+                            required
                           />
                         </Form.Group>
                       </Col>
@@ -80,6 +98,9 @@ const ContactUs = () => {
                             type="text"
                             className="rounded-pill"
                             placeholder="Last Name"
+                            name="lastName"
+                            value={text.lastName}
+                            onChange={handleChange}
                           />
                         </Form.Group>
                       </Col>
@@ -89,6 +110,9 @@ const ContactUs = () => {
                             type="email"
                             className="rounded-pill"
                             placeholder="Email"
+                            name="email"
+                            value={text.email}
+                            onChange={handleChange}
                           />
                         </Form.Group>
                       </Col>
@@ -98,12 +122,16 @@ const ContactUs = () => {
                             type="number"
                             className="rounded-pill"
                             placeholder="Mobile Number"
+                            name="mobileNumber"
+                            value={text.mobileNumber}
+                            onChange={handleChange}
                           />
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
                         <Select
                           options={options}
+                          name="country"
                           value={value}
                           onChange={changeHandler}
                         />
@@ -114,6 +142,9 @@ const ContactUs = () => {
                             type="text"
                             className="rounded-pill"
                             placeholder="Company (Optional)"
+                            name="company"
+                            value={text.company}
+                            onChange={handleChange}
                           />
                         </Form.Group>
                       </Col>
@@ -126,16 +157,20 @@ const ContactUs = () => {
                             inline
                             type="radio"
                             className="me-3"
-                            name="yes"
+                            name="workWithCompany"
                             id="yes"
                             label="yes"
+                            value={text.workWithCompany}
+                            onChange={handleChange}
                           />
                           <Form.Check
                             inline
                             type="radio"
-                            name="no"
+                            name="workWithCompany"
                             id="no"
                             label="no"
+                            value={text.workWithCompany}
+                            onChange={handleChange}
                           />
                         </div>
                       </Col>
@@ -145,12 +180,15 @@ const ContactUs = () => {
                             as="textarea"
                             rows={4}
                             placeholder="Message (Optional)"
+                            name="message"
+                            value={text.message}
+                            onChange={handleChange}
+                            required
                           />
                         </Form.Group>
                       </Col>
-
                       <Col>
-                        <NormalButton buttonTitle="Submit" />
+                        <NormalButton buttonTitle="Submit" type="submit" />
                       </Col>
                     </Row>
                   </Form>
@@ -166,8 +204,8 @@ const ContactUs = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224369.03562454425!2d77.26107949942362!3d28.516681710933348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1657464755398!5m2!1sen!2sin"
           width="100%"
           height="400"
-          allowfullscreen=""
-          referrerpolicy="no-referrer-when-downgrade"
+          allowFullScreen=""
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </>

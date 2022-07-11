@@ -27,7 +27,7 @@ const About = () => {
                 Over years working in IT services developing software
                 applications and mobile apps for clients all over the world.
               </p>
-              <NormalButton buttonTitle="Learn More" />
+              <NormalButton buttonTitle="Learn More" type="button" />
             </Col>
             <Col lg={6}>
               <div className="about-img">

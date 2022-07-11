@@ -6,6 +6,7 @@ const NormalButton = (props) => {
   return (
     <>
       <Button
+      type={props.type}
         className={`normal-btn border-0 rounded-pill ${
           props.css ? props.css : ""
         }`}
