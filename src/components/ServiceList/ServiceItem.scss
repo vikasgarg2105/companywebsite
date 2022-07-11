@@ -18,4 +18,19 @@
         }
     }
 }
-
+@media screen and (max-width:1400px) {
+    .service-page-item .service-page-content .service-item-name {
+        font-size: 15px;
+    }
+    .service-page-item .service-page-content .service-item-icon {
+        max-width: 32px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .service-page-item .service-page-content {
+        width: 90%;
+    }
+    .service-page-item .service-page-content .service-item-name {
+        font-size: 13px;
+    }
+}

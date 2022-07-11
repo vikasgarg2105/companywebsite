@@ -7,7 +7,32 @@
     background-size: cover;
     z-index: 1;
     .page-title-heading{
-        min-height: 550px;
+        // min-height: 550px;
         height: 100%;
+        padding: 20% 0%;
+    }
+    .circle-animation{
+        position: absolute;
+        max-width: 200px;
+        right: 100px;
+        bottom: -50px;
+        animation: move 4s linear infinite;
+    }
+}
+@keyframes move {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px, 60px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .page-title .page-title-heading {
+        padding: 25% 0%;
     }
 }
