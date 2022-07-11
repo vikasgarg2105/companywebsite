@@ -7,7 +7,7 @@ import arrowImg from "../../images/arrow.svg";
 const HowItWorks = () => {
   return (
     <>
-      <section className="how-it-works py-5">
+      <section className="how-it-works py-md-5 pt-5">
         <Container>
           <Row>
             <Col xs={12}>
@@ -18,7 +18,7 @@ const HowItWorks = () => {
                 <h2 className="mb-4">Check Out Our Work Process</h2>
               </div>
             </Col>
-            <Col lg={3} className="my-4">
+            <Col lg={3} className="my-lg-4 my-5">
               <div className="work-process-item position-relative d-flex flex-column justify-content-center align-items-center">
                 <div className="work-process-img position-relative text-center rounded-circle d-flex justify-content-center w-100 background-white align-items-center">
                   <img
@@ -42,7 +42,7 @@ const HowItWorks = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={3} className="my-4">
+            <Col lg={3} className="my-lg-4 my-5">
               <div className="work-process-item position-relative d-flex flex-column justify-content-center align-items-center">
                 <div className="work-process-img position-relative text-center rounded-circle d-flex justify-content-center w-100 background-white align-items-center">
                   <img
@@ -66,7 +66,7 @@ const HowItWorks = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={3} className="my-4">
+            <Col lg={3} className="my-lg-4 my-5">
               <div className="work-process-item position-relative d-flex flex-column justify-content-center align-items-center">
                 <div className="work-process-img position-relative text-center rounded-circle d-flex justify-content-center w-100 background-white align-items-center">
                   <img
@@ -92,7 +92,7 @@ const HowItWorks = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={3} className="my-4">
+            <Col lg={3} className="my-lg-4 my-5">
               <div className="work-process-item position-relative d-flex flex-column justify-content-center align-items-center">
                 <div className="work-process-img position-relative text-center rounded-circle d-flex justify-content-center w-100 background-white align-items-center">
                   <img

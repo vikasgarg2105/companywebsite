@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
             </Col>
             {ChooseUsObj.map((val) => {
               return (
-                <Col lg={3} className="my-4" key={val.name}>
+                <Col md={6} xl={3} className="my-4" key={val.name}>
                   <div className="why-choose-us-item border border-white p-4">
                     <div className="why-choose-us-img mx-auto my-3 border border-white d-flex align-item-center justify-content-center">
                       <img src={Consistency} alt="" className="img-fluid" />
@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
               );
             })}
 
-            <Col lg={4} className="my-5">
+            <Col lg={4} className="my-lg-5 mt-5 mb-0">
               <div className="support-service p-xl-4 p-3">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="my-5">
+            <Col lg={4} className="my-lg-5 mt-5 mb-0">
               <div className="support-service p-xl-4 p-3">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
@@ -118,7 +118,7 @@ const WhyChooseUs = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="my-5">
+            <Col lg={4} className="my-lg-5 mt-5 mb-0">
               <div className="support-service p-xl-4 p-3">
                 <div className="d-flex">
                   <div className="support-service-img me-3">

@@ -112,3 +112,16 @@ body{
         z-index: -1;
     }
 }
+
+@media screen and (max-width:576px) {
+    .heading h6 {
+        font-size: 16px;
+    }
+    .heading h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    h5 {
+        font-size: 18px !important;
+    }
+}

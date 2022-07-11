@@ -10,7 +10,7 @@ const Header = () => {
   const [colorChange, setColorchange] = useState(false);
   const [logo, setLogo] = useState(logoWhite);
   const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 60) {
       setColorchange(true);
       setLogo(logoBlack);
     } else {
@@ -34,7 +34,7 @@ const Header = () => {
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-            placement="end"
+            placement="start"
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>

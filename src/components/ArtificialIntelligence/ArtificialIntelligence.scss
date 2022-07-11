@@ -27,3 +27,34 @@
         bottom: -80px;
     }
 }
+@media screen and (max-width:1200px) {
+    .artificial-intellince .artificial-intelligence-item .robot-img {
+        max-width: 240px;
+        right: -60px;
+        bottom: -66px;
+    }
+}
+@media screen and (max-width:992px) {
+    .artificial-intellince .artificial-intelligence-item h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width:576px) {
+    .artificial-intelligence-item h5 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .artificial-intellince .artificial-intelligence-item h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .artificial-intellince .artificial-intelligence-item .robot-img {
+        max-width: 150px;
+        right: -30px;
+        bottom: -50px;
+    }
+    .artificial-intellince .artificial-intelligence-item {
+        border-radius: 24px;
+    }
+}

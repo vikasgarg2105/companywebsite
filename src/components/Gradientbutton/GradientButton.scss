@@ -9,3 +9,9 @@
         width: 20px;
     }
 }
+@media screen and (max-width:576px) {
+    .gradient-button {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+}

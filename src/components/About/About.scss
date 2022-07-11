@@ -29,3 +29,15 @@
         max-width: 510px;
     }
 }
+@media screen and (max-width:576px) {
+    .about-us p {
+        font-size: 16px;
+    }
+    .about-us .about-secp {
+        font-size: 18px;
+    }
+    .about-us {
+        padding: 125px 0px 200px 0px;
+        margin-top: -96px;
+    }
+}

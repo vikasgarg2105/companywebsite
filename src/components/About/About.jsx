@@ -14,7 +14,7 @@ const About = () => {
               <div className="heading">
                 <h6 className="d-flex align-items-center">About Us</h6>
                 <h2 className="mb-4">
-                  We are here to IT Solution with <br /> years of experience
+                  We are here to IT Solution with <br className="d-none d-md-block"/> years of experience
                 </h2>
               </div>
               <p>

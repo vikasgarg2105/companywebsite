@@ -14,14 +14,14 @@ const Footers = () => {
       <footer>
         <Container>
           <Row className="align-items-center">
-            <Col lg={6}>
-              <div className="company-logo py-5">
+            <Col md={6} className="my-md-5 mt-4">
+              <div className="company-logo">
                 <img src={logoBlack} alt="logo" className="img-fluid" />
               </div>
             </Col>
-            <Col lg={6}>
+            <Col md={6} className="my-md-5 my-4">
               <div className="social-icons">
-                <ul className="d-flex justify-content-end ps-0 mb-0">
+                <ul className="d-flex justify-content-md-end justify-content-center ps-0 mb-0">
                   <li className="rounded-circle mx-2 d-flex align-items-center justify-content-center">
                     <a
                       className="d-flex justify-content-center align-items-center"
@@ -207,8 +207,8 @@ const Footers = () => {
             </Col>
             <hr />
             <Col xs={12}>
-              <div className="d-flex align-items-center justify-content-between">
-                <div className="copyright">
+              <div className="d-flex flex-md-row flex-column align-items-center justify-content-between">
+                <div className="copyright text-md-start text-center mb-2 mb-md-0">
                   Copyright &copy; 2020 BluAmbition. All rights reserved.
                 </div>
                 <div className="support-links">
