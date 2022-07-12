@@ -24,9 +24,13 @@ const ContactUs = () => {
 
   const changeHandler = (value) => {
     setValue(value);
+    console.log(value);
   };
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
+  };
+
+  const submitBtn = () => {
     console.log(text);
   };
   return (
@@ -88,7 +92,6 @@ const ContactUs = () => {
                             name="firstName"
                             onChange={handleChange}
                             value={text.firstName}
-                            required
                           />
                         </Form.Group>
                       </Col>
@@ -132,7 +135,7 @@ const ContactUs = () => {
                         <Select
                           options={options}
                           name="country"
-                          value={value}
+                          value={text.country}
                           onChange={changeHandler}
                         />
                       </Col>
@@ -160,7 +163,7 @@ const ContactUs = () => {
                             name="workWithCompany"
                             id="yes"
                             label="yes"
-                            value={text.workWithCompany}
+                            value="Yes"
                             onChange={handleChange}
                           />
                           <Form.Check
@@ -169,7 +172,7 @@ const ContactUs = () => {
                             name="workWithCompany"
                             id="no"
                             label="no"
-                            value={text.workWithCompany}
+                            value="No"
                             onChange={handleChange}
                           />
                         </div>
@@ -183,12 +186,15 @@ const ContactUs = () => {
                             name="message"
                             value={text.message}
                             onChange={handleChange}
-                            required
                           />
                         </Form.Group>
                       </Col>
                       <Col>
-                        <NormalButton buttonTitle="Submit" type="submit" />
+                        <NormalButton
+                          buttonTitle="Submit"
+                          type="button"
+                          function={submitBtn}
+                        />
                       </Col>
                     </Row>
                   </Form>
