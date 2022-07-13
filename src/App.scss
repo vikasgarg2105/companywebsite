@@ -41,6 +41,12 @@ body{
 .heading.both-white h6::after {
     background: white;
 }
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0 !important;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    box-shadow: 0 0 0 0 !important;
+}
 
 // Service page
 .services-page{
@@ -65,6 +71,7 @@ body{
             background: var(--primary);
             width: 56px;
             height: 56px;
+            min-width: 56px;
             img{
                 width: 24px;
             }
@@ -74,6 +81,19 @@ body{
         .form-check .form-check-input {
             width: 20px;
             height: 20px;
+        }
+        .error-msg{
+            font-size: 12px;
+            left: 20px;
+            color: #ff0000;
+        }
+        .radio-error{
+            left: 175px;
+        }
+        .success-message{
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 20px;
         }
         textarea{
             border-radius: 24px;
@@ -115,6 +135,15 @@ body{
 .form-control:focus , .form-check-input:focus {
     border-color: #ced4da !important;
     box-shadow: 0 0 0 0 !important;
+}
+@media screen and (max-width:992px) {
+    .contact-us .contact-bg-color {
+        top: 40%;
+        left: 0px;
+    }
+    .contact-us .contact-form-container .radio-error {
+        left: 120px;
+    }
 }
 @media screen and (max-width:576px) {
     .heading h6 {

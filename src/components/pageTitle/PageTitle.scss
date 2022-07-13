@@ -33,6 +33,11 @@
 
 @media screen and (min-width:1600px) {
     .page-title .page-title-heading {
-        padding: 25% 0%;
+        padding: 26% 0%;
+    }
+}
+@media screen and (max-width:1200px) {
+    .page-title .circle-animation {
+        max-width: 160px;
     }
 }

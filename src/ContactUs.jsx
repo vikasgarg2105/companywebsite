@@ -10,6 +10,8 @@ import countryList from "react-select-country-list";
 const ContactUs = () => {
   document.title = "Contact Us";
   const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [text, setText] = useState({
     firstName: "",
     lastName: "",
@@ -24,14 +26,39 @@ const ContactUs = () => {
 
   const changeHandler = (value) => {
     setValue(value);
-    console.log(value);
+    setText({ ...text, country: value.label });
   };
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
   };
 
   const submitBtn = () => {
-    console.log(text);
+    console.log(text.firstName.length);
+    if (
+      text.firstName.length === 0 ||
+      text.lastName.length === 0 ||
+      text.email.length === 0 ||
+      text.mobileNumber.length === 0 ||
+      text.country.length === 0 ||
+      text.workWithCompany.length === 0 ||
+      text.message.length === 0
+    ) {
+      setError(true);
+      // alert("please field the input box");
+    } else {
+      setSuccess(true);
+      setText({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobileNumber: "",
+        country: "",
+        company: "",
+        workWithCompany: "",
+        message: "",
+      });
+      setError(false);
+    }
   };
   return (
     <>
@@ -39,7 +66,7 @@ const ContactUs = () => {
       <div className="contact-us position-relative pb-5">
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col lg={4} className="my-lg-4 my-5">
               <div className="heading">
                 <h6 className="d-flex align-items-center">Come Visit Us At</h6>
                 <h2 className="mb-5">Our Address</h2>
@@ -74,8 +101,8 @@ const ContactUs = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={8}>
-              <div className="contact-us-form ps-5 position-relative">
+            <Col lg={8} className="my-lg-4 my-5">
+              <div className="contact-us-form ps-lg-5 position-relative">
                 <div className="heading">
                   <h6 className="d-flex align-items-center">Send Message</h6>
                   <h2 className="mb-5">Drop Us a line</h2>
@@ -84,7 +111,10 @@ const ContactUs = () => {
                   <Form>
                     <Row className="mb-3">
                       <Col lg={6}>
-                        <Form.Group className="mb-4" controlId="firstName">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="firstName"
+                        >
                           <Form.Control
                             type="text"
                             className="rounded-pill"
@@ -93,10 +123,20 @@ const ContactUs = () => {
                             onChange={handleChange}
                             value={text.firstName}
                           />
+                          {error
+                            ? text.firstName.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
-                        <Form.Group className="mb-4" controlId="LastName">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="LastName"
+                        >
                           <Form.Control
                             type="text"
                             className="rounded-pill"
@@ -105,10 +145,20 @@ const ContactUs = () => {
                             value={text.lastName}
                             onChange={handleChange}
                           />
+                          {error
+                            ? text.lastName.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
-                        <Form.Group className="mb-4" controlId="email">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="email"
+                        >
                           <Form.Control
                             type="email"
                             className="rounded-pill"
@@ -117,10 +167,20 @@ const ContactUs = () => {
                             value={text.email}
                             onChange={handleChange}
                           />
+                          {error
+                            ? text.email.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
-                        <Form.Group className="mb-4" controlId="mobile-number">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="mobile-number"
+                        >
                           <Form.Control
                             type="number"
                             className="rounded-pill"
@@ -129,18 +189,37 @@ const ContactUs = () => {
                             value={text.mobileNumber}
                             onChange={handleChange}
                           />
+                          {error
+                            ? text.mobileNumber.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
-                        <Select
-                          options={options}
-                          name="country"
-                          value={text.country}
-                          onChange={changeHandler}
-                        />
+                        <div className="mb-4 position-relative">
+                          <Select
+                            options={options}
+                            name="country"
+                            value={value}
+                            onChange={changeHandler}
+                          />
+                          {error
+                            ? text.country.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
+                        </div>
                       </Col>
                       <Col lg={6}>
-                        <Form.Group className="mb-4" controlId="namemessage">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="namemessage"
+                        >
                           <Form.Control
                             type="text"
                             className="rounded-pill"
@@ -175,18 +254,35 @@ const ContactUs = () => {
                             value="No"
                             onChange={handleChange}
                           />
+                          {error
+                            ? text.workWithCompany.length === 0 && (
+                                <div className="error-msg radio-error position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </div>
                       </Col>
                       <Col lg={12}>
-                        <Form.Group className="mb-4" controlId="namemessage">
+                        <Form.Group
+                          className="mb-4 position-relative"
+                          controlId="namemessage"
+                        >
                           <Form.Control
                             as="textarea"
                             rows={4}
-                            placeholder="Message (Optional)"
+                            placeholder="Message"
                             name="message"
                             value={text.message}
                             onChange={handleChange}
                           />
+                          {error
+                            ? text.message.length === 0 && (
+                                <div className="error-msg position-absolute">
+                                  Please fill this field
+                                </div>
+                              )
+                            : ""}
                         </Form.Group>
                       </Col>
                       <Col>
@@ -195,6 +291,14 @@ const ContactUs = () => {
                           type="button"
                           function={submitBtn}
                         />
+                        {success ? (
+                          <div className="success-message mt-2 position-relative">
+                            Form have been Successfully submitted. We will call
+                            you shortly. Thank you !!!
+                          </div>
+                        ) : (
+                          ""
+                        )}
                       </Col>
                     </Row>
                   </Form>

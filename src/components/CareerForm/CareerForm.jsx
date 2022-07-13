@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "../CareerForm/CareerForm.scss";
 import Select from "react-select";
 import NormalButton from "../Normalbutton/NormalButton";
 
 const CareerForm = () => {
+  const [select, setSelect] = useState("");
+  const [text, setText] = useState({
+    name: "",
+    email: "",
+    mobileNumber: "",
+    position: "",
+    resumeFile: "",
+    message: "",
+  });
+  const handleSelect = (selectvalue) => {
+    setSelect(selectvalue);
+    setText({ ...text, position: selectvalue.value });
+  };
+  const handleChange = (e) => {
+    setText({ ...text, [e.target.name]: e.target.value });
+  };
+  const submitBtn = () => {
+    console.log(text);
+  };
   const profileOptions = [
     {
       value: "Mobile Application Development",
@@ -29,6 +48,9 @@ const CareerForm = () => {
               type="text"
               className="rounded-pill"
               placeholder="Name"
+              name="name"
+              value={text.name}
+              onChange={handleChange}
             />
           </Form.Group>
           <Form.Group className="mb-4" controlId="email">
@@ -36,6 +58,9 @@ const CareerForm = () => {
               type="email"
               className="rounded-pill"
               placeholder="Email"
+              name="email"
+              value={text.email}
+              onChange={handleChange}
             />
           </Form.Group>
           <Form.Group className="mb-4" controlId="mobile-number">
@@ -43,18 +68,32 @@ const CareerForm = () => {
               type="number"
               className="rounded-pill"
               placeholder="Mobile Number"
+              name="mobileNumber"
+              value={text.mobileNumber}
+              onChange={handleChange}
             />
           </Form.Group>
           <Select
             className="basic-single mb-4 rounded-pill"
             classNamePrefix="select"
             placeholder="Position apply for"
-            name="profile"
+            name="position"
             options={profileOptions}
+            value={select}
+            onChange={handleSelect}
           />
           <Form.Group className="mb-4" controlId="uploadbtn">
-            <Form.Label className="form-control position-relative p-0" id="uploadBtn">
-              <Form.Control type="file" className="rounded-pill" />
+            <Form.Label
+              className="form-control position-relative p-0"
+              id="uploadBtn"
+            >
+              <Form.Control
+                type="file"
+                className="rounded-pill"
+                name="resumeFile"
+                value={text.resumeFile}
+                onChange={handleChange}
+              />
               <NormalButton buttonTitle="Upload" />
             </Form.Label>
           </Form.Group>
@@ -63,9 +102,17 @@ const CareerForm = () => {
               type="text"
               className="rounded-pill"
               placeholder="Message (Optional)"
+              name="message"
+              value={text.message}
+              onChange={handleChange}
             />
           </Form.Group>
-          <NormalButton type="submit" buttonTitle="Apply Now" css="w-100" />
+          <NormalButton
+            type="button"
+            buttonTitle="Apply Now"
+            css="w-100"
+            function={submitBtn}
+          />
         </Form>
       </div>
     </>
