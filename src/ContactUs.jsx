@@ -8,10 +8,13 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 
 const ContactUs = () => {
+  const host = "http://localhost:3001";
   document.title = "Contact Us";
   const [value, setValue] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  // const [isChecked, setIsChecked] = useState("");
+  // const [isValid, setIsValid] = useState("");
   const [text, setText] = useState({
     firstName: "",
     lastName: "",
@@ -22,18 +25,24 @@ const ContactUs = () => {
     workWithCompany: "",
     message: "",
   });
+
   const options = useMemo(() => countryList().getData(), []);
 
   const changeHandler = (value) => {
     setValue(value);
     setText({ ...text, country: value.label });
   };
+  const emailRegex = /\S+@\S+\.\S+/;
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
+    // setIsChecked(e.target.value)
   };
-
-  const submitBtn = () => {
-    console.log(text.firstName.length);
+  const submitBtn = async () => {
+    // if (emailRegex.test(text.email)) {
+    //   setIsValid(true);
+    // } else {
+    //   setIsValid(false);
+    // }
     if (
       text.firstName.length === 0 ||
       text.lastName.length === 0 ||
@@ -41,11 +50,20 @@ const ContactUs = () => {
       text.mobileNumber.length === 0 ||
       text.country.length === 0 ||
       text.workWithCompany.length === 0 ||
-      text.message.length === 0
+      text.message.length === 0 ||
+      emailRegex.test(text.email) === false
     ) {
       setError(true);
-      // alert("please field the input box");
     } else {
+      // API Call
+      const response = await fetch(`${host}/api/contact/contact/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(text),
+      });
+
       setSuccess(true);
       setText({
         firstName: "",
@@ -57,6 +75,7 @@ const ContactUs = () => {
         workWithCompany: "",
         message: "",
       });
+      setValue("");
       setError(false);
     }
   };
@@ -167,13 +186,21 @@ const ContactUs = () => {
                             value={text.email}
                             onChange={handleChange}
                           />
-                          {error
-                            ? text.email.length === 0 && (
-                                <div className="error-msg position-absolute">
-                                  Please fill this field
-                                </div>
-                              )
-                            : ""}
+                          {error ? (
+                            text.email.length === 0 ? (
+                              <div className="error-msg position-absolute">
+                                Please fill this field
+                              </div>
+                            ) : !emailRegex.test(text.email) ? (
+                              <div className="error-msg position-absolute">
+                                Please fill valid email
+                              </div>
+                            ) : (
+                              ""
+                            )
+                          ) : (
+                            ""
+                          )}
                         </Form.Group>
                       </Col>
                       <Col lg={6}>
@@ -244,6 +271,9 @@ const ContactUs = () => {
                             label="yes"
                             value="Yes"
                             onChange={handleChange}
+                            checked={
+                              text.workWithCompany === "Yes" ? true : false
+                            }
                           />
                           <Form.Check
                             inline
@@ -253,6 +283,9 @@ const ContactUs = () => {
                             label="no"
                             value="No"
                             onChange={handleChange}
+                            checked={
+                              text.workWithCompany === "No" ? true : false
+                            }
                           />
                           {error
                             ? text.workWithCompany.length === 0 && (
