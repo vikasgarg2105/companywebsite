@@ -18,6 +18,7 @@ const Header = () => {
       setLogo(logoWhite);
     }
   };
+  
   window.addEventListener("scroll", changeNavbarColor);
   return (
     <>
