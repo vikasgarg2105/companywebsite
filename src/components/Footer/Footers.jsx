@@ -16,8 +16,7 @@ const Footers = () => {
           <Row className="align-items-center">
             <Col md={6} className="my-md-5 mt-4">
               <div className="company-logo">
-                {/* <img src={logoBlack} alt="logo" className="img-fluid" /> */}
-                Logo
+                <img src={logoBlack} alt="logo" className="img-fluid" />
               </div>
             </Col>
             <Col md={6} className="my-md-5 my-4">

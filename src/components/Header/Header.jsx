@@ -3,7 +3,7 @@ import { Navbar, Offcanvas, Nav, Container } from "react-bootstrap";
 import "../Header/Header.scss";
 import logoWhite from "../../images/logo.svg";
 import logoBlack from "../../images/logo-black.svg";
-import {Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   let expand = "xl";
@@ -28,8 +28,7 @@ const Header = () => {
       >
         <Container>
           <Link to="/" className="navbar-brand">
-            {/* <img src={logo} alt="" className="img-fluid" /> */}
-            Logo
+            <img src={logo} alt="" className="img-fluid" />
           </Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas

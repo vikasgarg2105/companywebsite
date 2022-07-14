@@ -13,8 +13,6 @@ const ContactUs = () => {
   const [value, setValue] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  // const [isChecked, setIsChecked] = useState("");
-  // const [isValid, setIsValid] = useState("");
   const [text, setText] = useState({
     firstName: "",
     lastName: "",
@@ -35,14 +33,8 @@ const ContactUs = () => {
   const emailRegex = /\S+@\S+\.\S+/;
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
-    // setIsChecked(e.target.value)
   };
   const submitBtn = async () => {
-    // if (emailRegex.test(text.email)) {
-    //   setIsValid(true);
-    // } else {
-    //   setIsValid(false);
-    // }
     if (
       text.firstName.length === 0 ||
       text.lastName.length === 0 ||
