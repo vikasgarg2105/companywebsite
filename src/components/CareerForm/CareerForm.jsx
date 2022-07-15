@@ -3,8 +3,10 @@ import { Form } from "react-bootstrap";
 import "../CareerForm/CareerForm.scss";
 import Select from "react-select";
 import NormalButton from "../Normalbutton/NormalButton";
+const axios = require("axios").default;
 
 const CareerForm = () => {
+  const host = "http://localhost:3001";
   const [select, setSelect] = useState("");
   const [text, setText] = useState({
     name: "",
@@ -21,8 +23,16 @@ const CareerForm = () => {
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
   };
-  const submitBtn = () => {
-    console.log(text);
+  const submitBtn = async (e) => {
+    e.preventDefault();
+    await axios
+      .post(`${host}/api/careers/careers/`, text)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   const profileOptions = [
     {
@@ -42,7 +52,7 @@ const CareerForm = () => {
             industry.
           </p>
         </div>
-        <Form>
+        <Form encType="multipart/form-data" method="post">
           <Form.Group className="mb-4" controlId="name">
             <Form.Control
               type="text"
@@ -108,7 +118,7 @@ const CareerForm = () => {
             />
           </Form.Group>
           <NormalButton
-            type="button"
+            type="submit"
             buttonTitle="Apply Now"
             css="w-100"
             function={submitBtn}

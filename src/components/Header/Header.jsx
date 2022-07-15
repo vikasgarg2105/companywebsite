@@ -44,22 +44,22 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink strict to="/" className="mx-2 nav-link">
+                <NavLink to="/" className="mx-2 nav-link">
                   Home
                 </NavLink>
-                <NavLink strict to="/about" className="mx-2 nav-link">
+                <NavLink to="/about" className="mx-2 nav-link">
                   About
                 </NavLink>
-                <NavLink strict to="/Services" className="mx-2 nav-link">
+                <NavLink to="/Services" className="mx-2 nav-link">
                   Services
                 </NavLink>
-                <NavLink strict to="/ourworks" className="mx-2 nav-link">
+                <NavLink to="/ourworks" className="mx-2 nav-link">
                   Our Works
                 </NavLink>
-                <NavLink strict to="/careers" className="mx-2 nav-link">
+                <NavLink to="/careers" className="mx-2 nav-link">
                   Careers
                 </NavLink>
-                <NavLink strict to="/contactus" className="ms-2 nav-link">
+                <NavLink to="/contactus" className="ms-2 nav-link">
                   Contact Us
                 </NavLink>
               </Nav>

@@ -119,7 +119,7 @@ const ContactUs = () => {
                   <h2 className="mb-5">Drop Us a line</h2>
                 </div>
                 <div className="contact-form-container">
-                  <Form>
+                  <Form method="post">
                     <Row className="mb-3">
                       <Col lg={6}>
                         <Form.Group
