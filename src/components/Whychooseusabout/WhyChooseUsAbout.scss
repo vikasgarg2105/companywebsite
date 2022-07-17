@@ -44,6 +44,25 @@
             width: 36px;
         }
     }
-    
-
+}
+@media screen and (max-width:1200px) {
+    .why-choose-us .support-service-about-page {
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width:767px) {
+    .why-choose-us .why-choose-us-item {
+        border-radius: 0px 30px 30px 30px;
+    }
+}
+@media screen and (max-width:576px) {
+    .why-choose-us .Adaptability {
+        margin-top: 0rem !important;
+    }
+    .why-choose-us .Transparency {
+        margin-top: 0rem !important;
+    }
+    .why-choose-us .Agility {
+        margin-top: 0rem !important;
+    }
 }

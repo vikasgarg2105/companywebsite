@@ -29,8 +29,8 @@ const ChooseUsObj = [
 const WhyChooseUs = () => {
   return (
     <>
-      <div className="why-choose-us py-5">
-        <Container>
+      <section className="why-choose-us py-5">
+        <Container className="py-5">
           <Row>
             <Col xs={12}>
               <div className="heading both both-white text-center">
@@ -144,7 +144,7 @@ const WhyChooseUs = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

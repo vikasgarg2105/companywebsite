@@ -3,15 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../Services/Services.scss";
 import ServiceItem from "./ServiceItem";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const Services = () => {
   return (
     <>
-      <div className="services py-5">
-        <Container fluid className="p-0">
+      <section className="services py-5">
+        <Container fluid className="px-0 py-5">
           <Row className="g-0">
             <Col xs={12}>
               <div className="heading both text-center">
@@ -27,10 +27,10 @@ const Services = () => {
                   loop={true}
                   autoplay={{
                     delay: 2500,
-                    disableOnInteraction: false,
+                    disableOnInteraction: true,
                   }}
                   pagination={true}
-                  modules={[Pagination]}
+                  modules={[Pagination, Autoplay]}
                   breakpoints={{
                     0: {
                       slidesPerView: 1.2,
@@ -81,7 +81,7 @@ const Services = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

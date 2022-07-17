@@ -4,17 +4,18 @@ import AboutImg from "../../images/about.png";
 import AboutBgImg from "../../images/about-bg.svg";
 import NormalButton from "../Normalbutton/NormalButton";
 import "../About/About.scss";
-const About = () => {
+const About = (props) => {
   return (
     <>
-      <div className="about-us position-relative">
+      <section className="about-us position-relative">
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="heading">
                 <h6 className="d-flex align-items-center">About Us</h6>
                 <h2 className="mb-4">
-                  We are here to IT Solution with <br className="d-none d-md-block"/> years of experience
+                  We are here to IT Solution with{" "}
+                  <br className="d-none d-md-block" /> years of experience
                 </h2>
               </div>
               <p>
@@ -27,7 +28,11 @@ const About = () => {
                 Over years working in IT services developing software
                 applications and mobile apps for clients all over the world.
               </p>
-              <NormalButton buttonTitle="Learn More" type="button" />
+              <NormalButton
+                buttonTitle="Learn More"
+                type="button"
+                css={props.css}
+              />
             </Col>
             <Col lg={6}>
               <div className="about-img">
@@ -43,7 +48,7 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

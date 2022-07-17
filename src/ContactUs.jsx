@@ -133,6 +133,7 @@ const ContactUs = () => {
                             name="firstName"
                             onChange={handleChange}
                             value={text.firstName}
+                            autoComplete="off"
                           />
                           {error
                             ? text.firstName.length === 0 && (
@@ -155,6 +156,7 @@ const ContactUs = () => {
                             name="lastName"
                             value={text.lastName}
                             onChange={handleChange}
+                            autoComplete="off"
                           />
                           {error
                             ? text.lastName.length === 0 && (
@@ -177,6 +179,7 @@ const ContactUs = () => {
                             name="email"
                             value={text.email}
                             onChange={handleChange}
+                            autoComplete="off"
                           />
                           {error ? (
                             text.email.length === 0 ? (
@@ -207,6 +210,7 @@ const ContactUs = () => {
                             name="mobileNumber"
                             value={text.mobileNumber}
                             onChange={handleChange}
+                            autoComplete="off"
                           />
                           {error
                             ? text.mobileNumber.length === 0 && (
@@ -224,6 +228,7 @@ const ContactUs = () => {
                             name="country"
                             value={value}
                             onChange={changeHandler}
+                            autoComplete="off"
                           />
                           {error
                             ? text.country.length === 0 && (
@@ -246,6 +251,7 @@ const ContactUs = () => {
                             name="company"
                             value={text.company}
                             onChange={handleChange}
+                            autoComplete="off"
                           />
                         </Form.Group>
                       </Col>
@@ -300,6 +306,7 @@ const ContactUs = () => {
                             name="message"
                             value={text.message}
                             onChange={handleChange}
+                            autoComplete="off"
                           />
                           {error
                             ? text.message.length === 0 && (

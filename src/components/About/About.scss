@@ -29,6 +29,12 @@
         max-width: 510px;
     }
 }
+@media screen and (max-width:1200px) {
+    .about-us .about-bg-img {
+        max-width: 400px;
+        bottom: 45px;
+    }
+}
 @media screen and (max-width:576px) {
     .about-us p {
         font-size: 16px;
@@ -39,5 +45,9 @@
     .about-us {
         padding: 125px 0px 200px 0px;
         margin-top: -96px;
+    }
+    .about-us .about-bg-img {
+        max-width: 280px;
+        bottom: 60px;
     }
 }

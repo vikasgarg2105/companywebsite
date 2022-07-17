@@ -11,7 +11,7 @@ import logoBlack from "../../images/logo-black.svg";
 const Footers = () => {
   return (
     <>
-      <footer>
+      <footer className="position-relative">
         <Container>
           <Row className="align-items-center">
             <Col md={6} className="my-md-5 mt-4">
@@ -173,34 +173,34 @@ const Footers = () => {
                 </div>
                 <ul className="ps-0 mb-0">
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <div href="#" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> #205,
                       sector-62, Noida (201301) U.P.
-                    </a>
+                    </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <div href="#" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> +1 (123)
                       456-7890
-                    </a>
+                    </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <div href="#" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" />{" "}
                       info@company.com
-                    </a>
+                    </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <div href="#" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> +1 (123)
                       456-7890
-                    </a>
+                    </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <div href="#" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> 09.00 AM
                       - 05.00 PM
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>

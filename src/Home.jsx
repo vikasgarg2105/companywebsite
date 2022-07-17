@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 import HowItWorks from "./components/Howitworks/HowItWorks";
 import Services from "./components/Services/Services";
 import WhyChooseUs from "./components/Whychooseus/WhyChooseUs";
+import Team from "./components/Team/Team";
 
 const Home = () => {
   document.title = "Home - BluAmbition Pvt. Ltd.";
@@ -17,6 +18,7 @@ const Home = () => {
       <WhyChooseUs />
       <HowItWorks />
       <ArtificialIntelligence />
+      <Team/>
       <Clients />
     </>
   );

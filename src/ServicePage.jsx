@@ -19,22 +19,22 @@ const ServicePage = () => {
                 <h2 className="mb-4">What we Do</h2>
               </div>
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
-            <Col lg="4" className="my-4">
+            <Col md={6} lg={4} className="my-4">
               <ServiceItem />
             </Col>
           </Row>

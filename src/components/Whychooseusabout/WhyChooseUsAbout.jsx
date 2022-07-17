@@ -32,11 +32,11 @@ const WhyChooseUsAbout = () => {
       <div className="why-choose-us py-5">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6}>
+            <Col xl={6}>
               <Row className="me-lg-3 me-0">
                 {ChooseUsObj.map((val) => {
                   return (
-                    <Col lg={6} className="my-4" key={val.name}>
+                    <Col sm={6} className="my-4" key={val.name}>
                       <div
                         className={`why-choose-us-item border border-white p-3 ${val.name}`}
                       >
@@ -53,7 +53,7 @@ const WhyChooseUsAbout = () => {
                 })}
               </Row>
             </Col>
-            <Col lg={6}>
+            <Col xl={6}>
               <div className="why-choose-us-content ms-lg-3 ms-0">
                 <div className="heading both both-white">
                   <h6 className="d-flex align-items-center text-white">
@@ -92,7 +92,7 @@ const WhyChooseUsAbout = () => {
               </div>
             </Col>
 
-            <Col lg={4} className="mt-5">
+            <Col xl={4} className="mt-5">
               <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
@@ -114,7 +114,7 @@ const WhyChooseUsAbout = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="mt-5">
+            <Col xl={4} className="mt-5">
               <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
@@ -136,7 +136,7 @@ const WhyChooseUsAbout = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="mt-5">
+            <Col xl={4} className="mt-5">
               <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">

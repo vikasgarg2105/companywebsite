@@ -8,7 +8,7 @@ const HowItWorks = () => {
   return (
     <>
       <section className="how-it-works py-md-5 pt-5">
-        <Container>
+        <Container className="pt-5">
           <Row>
             <Col xs={12}>
               <div className="heading both text-center">

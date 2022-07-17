@@ -6,6 +6,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     .why-choose-us-item {
+        &:hover{
+            background: #00b8ca40;
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--primary) !important;
+        }
         border-radius: 0px 42px 42px 42px;
         .why-choose-us-img {
             width: 80px;

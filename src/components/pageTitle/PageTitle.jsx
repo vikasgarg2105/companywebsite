@@ -1,7 +1,7 @@
 import React from "react";
 import "../pageTitle/PageTitle.scss";
 import { Container, Row, Col } from "react-bootstrap";
-import CircleAnim from "../../images/circle-anim.svg"
+import CircleAnim from "../../images/circle-anim.svg";
 
 const PageTitle = (props) => {
   return (
@@ -13,7 +13,7 @@ const PageTitle = (props) => {
               <div className="page-title-heading text-center text-white d-flex justify-content-center align-items-center">
                 <h1>{props.Pagename}</h1>
                 <div className="circle-animation">
-                    <img src={CircleAnim} alt="" className="img-fluid" />
+                  <img src={CircleAnim} alt="" className="img-fluid" />
                 </div>
               </div>
             </Col>

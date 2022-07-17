@@ -41,3 +41,35 @@
         max-width: 160px;
     }
 }
+@media screen and (max-width:992px) {
+    .page-title .page-title-heading {
+        padding: 22% 0%;
+    }
+}
+@media screen and (max-width:900px) {
+    .page-title .page-title-heading {
+        padding: 20% 0%;
+    }
+}
+@media screen and (max-width:768px) {
+    .page-title .page-title-heading {
+        padding: 20% 0%;
+    }
+    .page-title .circle-animation {
+        max-width: 120px;
+        bottom: -24px;
+    }
+}
+@media screen and (max-width:576px) {
+    .page-title .page-title-heading {
+        padding: 30% 0%;
+    }
+    .page-title .circle-animation {
+        max-width: 80px;
+        bottom: 15px;
+        right: 20px;
+    }
+    .page-title h1{
+        font-size: 24px;
+    }
+}

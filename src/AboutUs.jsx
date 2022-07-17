@@ -9,7 +9,7 @@ const AboutUs = () => {
   return (
     <>
       <PageTitle Pagename="About Us" />
-      <About />
+      <About css="d-none" />
       <WhyChooseUsAbout />
       <Team />
     </>

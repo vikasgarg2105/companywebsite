@@ -7,14 +7,14 @@ import Figma from "../../images/figma.svg";
 import YouTube from "../../images/youtube.svg";
 import "../Clients/Clients.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const Clients = () => {
   return (
     <>
-      <section className="clients py-md-5 my-5">
+      <section className="clients py-md-5 mb-5">
         <Container>
           <Row>
             <Col>
@@ -25,10 +25,10 @@ const Clients = () => {
                 loop={true}
                 autoplay={{
                   delay: 2500,
-                  disableOnInteraction: false,
+                  disableOnInteraction: true,
                 }}
                 pagination={true}
-                modules={[Pagination]}
+                modules={[Autoplay,Pagination]}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
@@ -49,7 +49,7 @@ const Clients = () => {
                   1200: {
                     slidesPerView: 5,
                     spaceBetween: 50,
-                  }
+                  },
                 }}
               >
                 <SwiperSlide className="mb-5">

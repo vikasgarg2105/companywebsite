@@ -25,16 +25,16 @@ const Team = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={3}>
+            <Col sm={6} md={6} lg={3}>
               <TeamItem />
             </Col>
-            <Col lg={3}>
+            <Col sm={6} md={6} lg={3}>
               <TeamItem />
             </Col>
-            <Col lg={3}>
+            <Col sm={6} md={6} lg={3}>
               <TeamItem />
             </Col>
-            <Col lg={3}>
+            <Col sm={6} md={6} lg={3}>
               <TeamItem />
             </Col>
           </Row>
