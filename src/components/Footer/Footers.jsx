@@ -174,8 +174,7 @@ const Footers = () => {
                 <ul className="ps-0 mb-0">
                   <li className="d-flex align-items-center">
                     <div href="#" className="d-flex align-items-center">
-                      <img src={doubleArrow} alt="" className="me-2" /> #205,
-                      sector-62, Noida (201301) U.P.
+                      <img src={doubleArrow} alt="" className="me-2" />sector-62, Noida (201301) U.P.
                     </div>
                   </li>
                   <li className="d-flex align-items-center">

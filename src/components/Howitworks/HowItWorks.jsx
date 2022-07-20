@@ -7,8 +7,8 @@ import arrowImg from "../../images/arrow.svg";
 const HowItWorks = () => {
   return (
     <>
-      <section className="how-it-works py-md-5 pt-5">
-        <Container className="pt-5">
+      <section className="how-it-works py-md-5 pt-5 mt-5">
+        <Container className="pt-5 mt-5">
           <Row>
             <Col xs={12}>
               <div className="heading both text-center">

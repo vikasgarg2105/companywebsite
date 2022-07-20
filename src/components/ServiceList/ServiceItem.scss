@@ -1,5 +1,6 @@
 .service-page-item{
     cursor: pointer;
+    border-radius: 24px;
     .service-img img{
         border-radius: 24px;
     }
@@ -42,15 +43,15 @@
     text-align: center;
     padding: 0px 15px;
 }
-.service-page-item:hover .service-page-content .service-page-container .service-item-name{
+.service-page-item:hover .service-item-name{
     font-weight: 600;
     font-size: 20px;
 }
-.service-page-item:hover .service-page-content .service-page-container .service-item-description{
+.service-page-item:hover .service-item-description{
     display: block;
     margin-top: 8px;
 }
-.service-page-item:hover .service-page-content .service-page-container .service-item-icon{
+.service-page-item:hover .service-item-icon{
     max-width: 90px;
     background: var(--primary);
     width: 90px;
@@ -61,7 +62,7 @@
     justify-content: center;
     margin: 0px auto 15px auto !important;
 }
-.service-page-item:hover .service-page-content .service-page-container .service-item-icon img{
+.service-page-item:hover .service-item-icon img{
     filter: brightness(0)invert(1);
 }
 @media screen and (max-width:1400px) {

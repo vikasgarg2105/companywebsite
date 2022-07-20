@@ -39,7 +39,9 @@ const Header = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Offcanvas
+                <Link to="/" className="navbar-brand">
+                  <img src={logoBlack} alt="" className="img-fluid" />
+                </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

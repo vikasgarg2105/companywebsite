@@ -3,21 +3,45 @@ import PageTitle from "./components/pageTitle/PageTitle";
 import { Container, Row, Col } from "react-bootstrap";
 import CareerItem from "./components/CareerItem/CareerItem";
 import CareerForm from "./components/CareerForm/CareerForm";
-import NoJob from "./images/no-job.gif"
+import NoJob from "./images/no-job.gif";
 
 const careerData = [
-  // {
-  //   jobDuration: "Full Time",
-  //   jobTitle: "Mobile App Developer",
-  //   jobDescription:
-  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-  // },
-  // {
-  //   jobDuration: "part Time",
-  //   jobTitle: "Mobile App Developer",
-  //   jobDescription:
-  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-  // }
+  {
+    jobDuration: "Full Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
+  {
+    jobDuration: "part Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
+  {
+    jobDuration: "Full Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
+  {
+    jobDuration: "part Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
+  {
+    jobDuration: "Full Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
+  {
+    jobDuration: "part Time",
+    jobTitle: "Mobile App Developer",
+    jobDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+  },
 ];
 
 const Careers = () => {
@@ -49,22 +73,20 @@ const Careers = () => {
                       <Col xs={12} className="my-3">
                         {/* <p className="text-center">No Vacancies !!!</p> */}
                         <div className="no-job-found text-center">
-                        <img src={NoJob} alt="" className="img-fluid" />
+                          <img src={NoJob} alt="" className="img-fluid" />
                         </div>
                       </Col>
                     </>
                   ) : (
                     careerData.map((item, index) => {
                       return (
-                        <>
-                          <Col md={6} className="my-3" key={index}>
-                            <CareerItem
-                              jobDuration={item.jobDuration}
-                              jobTitle={item.jobTitle}
-                              jobDescription={item.jobDescription}
-                            />
-                          </Col>
-                        </>
+                        <Col md={6} className="my-3" key={index}>
+                          <CareerItem
+                            jobDuration={item.jobDuration}
+                            jobTitle={item.jobTitle}
+                            jobDescription={item.jobDescription}
+                          />
+                        </Col>
                       );
                     })
                   )}

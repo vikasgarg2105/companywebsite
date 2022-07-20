@@ -5,7 +5,7 @@ import ServiceIcon from "../../images/service-icon.svg";
 
 const ServiceItem = () => {
   return (
-    <div className="service-page-item position-relative overflow-hidden pb-5">
+    <div className="service-page-item position-relative overflow-hidden pb-5 h-100">
       <div className="service-img">
         <img src={ServiceImg} alt="" className="img-fluid" />
       </div>

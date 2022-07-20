@@ -7,75 +7,93 @@ const ChooseUsObj = [
   {
     name: "Consistency",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's.",
   },
   {
     name: "Adaptability",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's.",
   },
   {
     name: "Transparency",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's.",
   },
   {
     name: "Agility",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's.",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
     <>
-      <section className="why-choose-us py-5">
-        <Container className="py-5">
-          <Row>
-            <Col xs={12}>
-              <div className="heading both both-white text-center">
-                <h6 className="d-flex align-items-center justify-content-center text-white">
-                  Why Choose Us ?
-                </h6>
-                <h2 className="mb-4 text-white">
-                  We Provide World Class <br /> IT Solution Service
-                </h2>
+      <div className="why-choose-us py-5">
+        <Container>
+          <Row className="align-items-center">
+            <Col xl={6}>
+              <Row className="me-lg-3 me-0">
+                {ChooseUsObj.map((val) => {
+                  return (
+                    <Col sm={6} className="my-4" key={val.name}>
+                      <div
+                        className={`why-choose-us-item border border-white p-3 ${val.name}`}
+                      >
+                        <div className="why-choose-us-img mx-auto my-3 border border-white d-flex align-item-center justify-content-center">
+                          <img src={Consistency} alt="" className="img-fluid" />
+                        </div>
+                        <div className="why-choose-us-content text-center">
+                          <h5 className="text-white mt-4 mb-3">{val.name}</h5>
+                          <p className="text-white mb-3">{val.description}</p>
+                        </div>
+                      </div>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Col>
+            <Col xl={6}>
+              <div className="why-choose-us-content ms-lg-3 ms-0">
+                <div className="heading both both-white">
+                  <h6 className="d-flex align-items-center text-white">
+                    Why Choose Us ?
+                  </h6>
+                  <h2 className="mb-4 text-white">
+                    We Provide World Class <br /> IT Solution Service
+                  </h2>
+                </div>
+                <div className="why-choose-us-description text-white">
+                  <p className="mb-4">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                </div>
               </div>
             </Col>
-            {ChooseUsObj.map((val) => {
-              return (
-                <Col md={6} xl={3} className="my-4" key={val.name}>
-                  <div className="why-choose-us-item border border-white p-4">
-                    <div className="why-choose-us-img mx-auto my-3 border border-white d-flex align-item-center justify-content-center">
-                      <img src={Consistency} alt="" className="img-fluid" />
-                    </div>
-                    <div className="why-choose-us-content">
-                      <h5 className="text-white mt-4 mb-3">{val.name}</h5>
-                      <p className="text-white mb-3">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard.
-                      </p>
-                      <div className="mb-3">
-                        <a href="#" className="text-white">
-                          Read More{" "}
-                          <svg
-                            className="ms-2"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                          >
-                            <path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              );
-            })}
 
-            <Col lg={4} className="my-lg-5 mt-5 mb-0">
-              <div className="support-service p-xl-4 p-3">
+            <Col xl={4} className="mt-5">
+              <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
                     <svg
@@ -96,8 +114,8 @@ const WhyChooseUs = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="my-lg-5 mt-5 mb-0">
-              <div className="support-service p-xl-4 p-3">
+            <Col xl={4} className="mt-5">
+              <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
                     <svg
@@ -118,8 +136,8 @@ const WhyChooseUs = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} className="my-lg-5 mt-5 mb-0">
-              <div className="support-service p-xl-4 p-3">
+            <Col xl={4} className="mt-5">
+              <div className="support-service support-service-about-page p-4">
                 <div className="d-flex">
                   <div className="support-service-img me-3">
                     <svg
@@ -144,7 +162,7 @@ const WhyChooseUs = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </div>
     </>
   );
 };
