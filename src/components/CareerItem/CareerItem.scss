@@ -23,3 +23,33 @@
     box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.12);
     border: none;
 }
+.careers-forms .modal-content {
+    background-color: #fff0;
+    border: 0px solid transparent;
+}
+.careers-forms .close-btn{
+    z-index: 9999;
+    right: -17px;
+    color: black;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 5px 2px #0000001f;
+    font-size: 24px;
+    font-weight: 600;
+    &:hover{
+        background: white !important;
+        color: black;
+        box-shadow: 0px 0px 5px 2px #0000001f;
+    }
+    &:active{
+        color: black;
+        &:focus{
+            box-shadow: 0px 0px 5px 2px #0000001f !important;
+        }
+    }
+    &:focus{
+        box-shadow: 0px 0px 5px 2px #0000001f !important;
+        color: black !important;
+    }
+}

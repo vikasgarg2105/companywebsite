@@ -25,7 +25,7 @@ const Footers = () => {
                   <li className="rounded-circle mx-2 d-flex align-items-center justify-content-center">
                     <a
                       className="d-flex justify-content-center align-items-center"
-                      href="#"
+                      href="/"
                     >
                       <img src={facebook} alt="" />
                     </a>
@@ -33,7 +33,7 @@ const Footers = () => {
                   <li className="rounded-circle mx-2 d-flex align-items-center justify-content-center">
                     <a
                       className="d-flex justify-content-center align-items-center"
-                      href="#"
+                      href="/"
                     >
                       <img src={twitter} alt="" />
                     </a>
@@ -41,7 +41,7 @@ const Footers = () => {
                   <li className="rounded-circle mx-2 d-flex align-items-center justify-content-center">
                     <a
                       className="d-flex justify-content-center align-items-center"
-                      href="#"
+                      href="/"
                     >
                       <img src={instagram} alt="" />
                     </a>
@@ -49,7 +49,7 @@ const Footers = () => {
                   <li className="rounded-circle ms-2 d-flex align-items-center justify-content-center">
                     <a
                       className="d-flex justify-content-center align-items-center"
-                      href="#"
+                      href="/"
                     >
                       <img src={linkedin} alt="" />
                     </a>
@@ -84,33 +84,33 @@ const Footers = () => {
 
                 <ul className="ps-0 mb-0">
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Home
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> About Us
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Services
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Our
                       Works
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Careers
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Contact
                       Us
                     </a>
@@ -127,37 +127,37 @@ const Footers = () => {
 
                 <ul className="ps-0 mb-0">
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Web
                       Designing &amp; Development
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Mobile
                       App Development
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Branding
                       &amp; Designs
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> AI
                       Solutions
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Chatbot
                       Development
                     </a>
                   </li>
                   <li className="d-flex align-items-center">
-                    <a href="#" className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> Digital
                       Marketing Us
                     </a>
@@ -173,30 +173,30 @@ const Footers = () => {
                 </div>
                 <ul className="ps-0 mb-0">
                   <li className="d-flex align-items-center">
-                    <div href="#" className="d-flex align-items-center">
+                    <div href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" />sector-62, Noida (201301) U.P.
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <div href="#" className="d-flex align-items-center">
+                    <div href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> +1 (123)
                       456-7890
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <div href="#" className="d-flex align-items-center">
+                    <div href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" />{" "}
                       info@company.com
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <div href="#" className="d-flex align-items-center">
+                    <div href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> +1 (123)
                       456-7890
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
-                    <div href="#" className="d-flex align-items-center">
+                    <div href="/" className="d-flex align-items-center">
                       <img src={doubleArrow} alt="" className="me-2" /> 09.00 AM
                       - 05.00 PM
                     </div>
@@ -213,10 +213,10 @@ const Footers = () => {
                 <div className="support-links">
                   <ul className="d-flex align-items-center ps-0 mb-0">
                     <li className="ms-3">
-                      <a href="#">Privacy Policy</a>
+                      <a href="/">Privacy Policy</a>
                     </li>
                     <li className="ms-3">
-                      <a href="#">Terms &amp; Conditions</a>
+                      <a href="/">Terms &amp; Conditions</a>
                     </li>
                   </ul>
                 </div>

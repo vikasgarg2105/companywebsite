@@ -1,6 +1,6 @@
 import React from "react";
 import "../CareerItem/CareerItem.scss";
-import NormalButton from "../Normalbutton/NormalButton";
+import { Button } from "react-bootstrap";
 const CareerItem = (props) => {
   return (
     <>
@@ -8,7 +8,15 @@ const CareerItem = (props) => {
         <h6 className="job-duration mb-3">{props.jobDuration}</h6>
         <h5 className="job-title mb-3">{props.jobTitle}</h5>
         <p className="mb-5">{props.jobDescription}</p>
-        <NormalButton buttonTitle="Apply Now" type="button" />
+        <Button
+          type="button"
+          onClick={() => {
+            props.handleShow(props.id);
+          }}
+          className="normal-btn border-0 rounded-pill"
+        >
+          Apply Now
+        </Button>
       </div>
     </>
   );

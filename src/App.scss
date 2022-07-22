@@ -150,6 +150,9 @@ p, h1, h2, h3, h4, h5, h6{
     border-color: #ced4da !important;
     box-shadow: 0 0 0 0 !important;
 }
+.form-control:disabled, .form-control[readonly] {
+    background-color: var(--footerBg) !important;
+}
 
 // Map
 .company-map{

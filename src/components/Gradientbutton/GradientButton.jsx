@@ -1,6 +1,5 @@
 import React from "react";
 import "../Gradientbutton/GradientButton.scss";
-import rightArrow from "../../images/right-arrow.svg";
 
 const GradientButton = (props) => {
   return (
