@@ -62,6 +62,7 @@ const Careers = () => {
   const [error, setError] = useState(false);
   const [modalError, setModalError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [modalSuccess, setModalSuccess] = useState(false);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -71,10 +72,19 @@ const Careers = () => {
       return item.id === getid;
     });
     let positionValue = item[0].jobTitle;
-    console.log(positionValue);
     setText({ ...text, position: positionValue });
+    setModalText({ ...modalText, position: positionValue });
+    setModalSuccess(false)
   };
   const [text, setText] = useState({
+    name: "",
+    email: "",
+    mobileNumber: "",
+    position: "",
+    resumeFile: "",
+    message: "",
+  });
+  const [modalText, setModalText] = useState({
     name: "",
     email: "",
     mobileNumber: "",
@@ -85,9 +95,14 @@ const Careers = () => {
   const handleSelect = (selectvalue) => {
     setSelect(selectvalue);
     setText({ ...text, position: selectvalue.value });
+    setModalText({ ...modalText, position: selectvalue.value });
   };
   const handleChange = (e) => {
     setText({ ...text, [e.target.name]: e.target.value });
+    // console.log(text);
+  };
+  const handleModalChange = (e) => {
+    setModalText({ ...modalText, [e.target.name]: e.target.value });
     // console.log(text);
   };
   const handleFile = (e) => {
@@ -99,6 +114,16 @@ const Careers = () => {
     // }
     // console.log(file, text);
     setText({ ...text, resumeFile: file });
+  };
+  const handleModalFile = (e) => {
+    var file = e.target.files[0];
+    // if(file.name.length>=25){
+    //   let filename = file.name.slice(0, 12) + `...` + file.name.slice(-8);
+    //   // inputRef.current.value = filename;
+    //   setText({ ...text, resumeFile: filename });
+    // }
+    // console.log(file, text);
+    setModalText({ ...modalText, resumeFile: file });
   };
   const emailRegex = /\S+@\S+\.\S+/;
   const submitBtn = async (e) => {
@@ -157,30 +182,30 @@ const Careers = () => {
   const submitModalBtn = async (e) => {
     e.preventDefault();
     if (
-      text.name.length === 0 ||
-      text.email.length === 0 ||
-      text.mobileNumber.length === 0 ||
-      text.position.length === 0 ||
-      text.resumeFile.length === 0 ||
-      emailRegex.test(text.email) === false
+      modalText.name.length === 0 ||
+      modalText.email.length === 0 ||
+      modalText.mobileNumber.length === 0 ||
+      modalText.position.length === 0 ||
+      modalText.resumeFile.length === 0 ||
+      emailRegex.test(modalText.email) === false
     ) {
       setModalError(true);
-      setSuccess(false);
+      setModalSuccess(false);
     } else {
       var url = `${host}/api/careers/careers/`;
       let formData = new FormData();
       var respo = "";
-      formData.append("name", text.name);
-      formData.append("email", text.email);
-      formData.append("mobileNumber", text.mobileNumber);
-      formData.append("position", text.position);
-      formData.append("resumeFile", text.resumeFile);
-      formData.append("message", text.message);
+      formData.append("name", modalText.name);
+      formData.append("email", modalText.email);
+      formData.append("mobileNumber", modalText.mobileNumber);
+      formData.append("position", modalText.position);
+      formData.append("resumeFile", modalText.resumeFile);
+      formData.append("message", modalText.message);
       // console.log(text);
-      setSuccess(true);
+      setModalSuccess(true);
       setSelect("");
       // input field value empty
-      setText({
+      setModalText({
         name: "",
         email: "",
         mobileNumber: "",
@@ -298,17 +323,17 @@ const Careers = () => {
             x
           </Button>
           <CareerForm
-            text={text}
-            handleChange={handleChange}
+            text={modalText}
+            handleChange={handleModalChange}
             error={modalError}
             emailRegex={emailRegex}
-            success={success}
-            select={select}
+            success={modalSuccess}
+            // select={select}
             profileOptions={profileOptions}
             handleSelect={handleSelect}
             submitModalBtn={submitModalBtn}
             inputRef={inputRef}
-            handleFile={handleFile}
+            handleFile={handleModalFile}
             css="my-0 p-4"
             show={show}
           />

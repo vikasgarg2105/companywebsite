@@ -83,34 +83,44 @@ const CareerForm = (props) => {
           </Form.Group>
           <div className="mb-4 position-relative">
             {props.show ? (
-              <Form.Control
-                type="text"
-                className="rounded-pill"
-                placeholder="Position apply for"
-                name="position"
-                value={props.text.position}
-                onChange={props.handleChange}
-                disabled
-              />
+              <>
+                <Form.Control
+                  type="text"
+                  className="rounded-pill"
+                  placeholder="Position apply for"
+                  name="position"
+                  value={props.text.position}
+                  onChange={props.handleChange}
+                  disabled
+                />
+                {props.error
+                  ? props.text.position.length === 0 && (
+                      <div className="error-msg position-absolute">
+                        Please fill this field
+                      </div>
+                    )
+                  : ""}
+              </>
             ) : (
-              <Select
-                className="basic-single rounded-pill"
-                classNamePrefix="select"
-                placeholder="Position apply for"
-                name="position"
-                options={props.profileOptions}
-                value={props.select}
-                onChange={props.handleSelect}
-              />
+              <>
+                <Select
+                  className="basic-single rounded-pill"
+                  classNamePrefix="select"
+                  placeholder="Position apply for"
+                  name="position"
+                  options={props.profileOptions}
+                  value={props.select}
+                  onChange={props.handleSelect}
+                />
+                {props.error
+                  ? props.select.length === 0 && (
+                      <div className="error-msg position-absolute">
+                        Please fill this field
+                      </div>
+                    )
+                  : ""}
+              </>
             )}
-
-            {props.error
-              ? props.text.position.length === 0 && (
-                  <div className="error-msg position-absolute">
-                    Please fill this field
-                  </div>
-                )
-              : ""}
           </div>
           <Form.Group className="mb-4 position-relative" controlId="uploadbtn">
             <Form.Label
