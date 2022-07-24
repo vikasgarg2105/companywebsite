@@ -4,8 +4,59 @@ import "../Services/Services.scss";
 import ServiceItem from "./ServiceItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
+import MobileAppImg from "../../images/mobile-app-development.svg";
+import WebDevelopmentImg from "../../images/web-development.svg";
+import BrandingImg from "../../images/Branding-and-designing.svg";
+import DigitalMarketingImg from "../../images/digital-marketing.svg";
+import AIImg from "../../images/Artificial-Intelligence.svg";
+import CRMImg from "../../images/CRM-software.svg";
 import "swiper/css";
 import "swiper/css/pagination";
+
+const serviceItem = [
+  {
+    serviceImg: MobileAppImg,
+    serviceName: "Mobile App Development",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: WebDevelopmentImg,
+    serviceName: "Web Designing & Development",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: DigitalMarketingImg,
+    serviceName: "Digital Marketing",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: BrandingImg,
+    serviceName: "Branding & Design",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: CRMImg,
+    serviceName: "CRM SOftware",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: AIImg,
+    serviceName: "AI Solutions",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+  {
+    serviceImg: MobileAppImg,
+    serviceName: "Chatbot Devlopment",
+    serviceDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.",
+  },
+];
 
 const Services = () => {
   return (
@@ -26,7 +77,7 @@ const Services = () => {
                   centeredSlides={true}
                   loop={true}
                   autoplay={{
-                    delay: 2500,
+                    delay: 3500,
                     disableOnInteraction: true,
                   }}
                   pagination={true}
@@ -58,24 +109,17 @@ const Services = () => {
                     },
                   }}
                 >
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
-                  <SwiperSlide className="mb-5">
-                    <ServiceItem />
-                  </SwiperSlide>
+                  {serviceItem.map((item, index) => {
+                    return (
+                      <SwiperSlide className="mb-5" key={index}>
+                        <ServiceItem
+                          serviceName={item.serviceName}
+                          serviceDescription={item.serviceDescription}
+                          serviceImg={item.serviceImg}
+                        />
+                      </SwiperSlide>
+                    );
+                  })}
                 </Swiper>
               </div>
             </Col>

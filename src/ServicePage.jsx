@@ -4,7 +4,7 @@ import PageTitle from "./components/pageTitle/PageTitle";
 import ServiceItem from "./components/ServiceList/ServiceItem";
 
 const ServicePage = () => {
-  document.title="Services";
+  document.title = "Services";
   return (
     <>
       <PageTitle Pagename="Services" />

@@ -48,7 +48,7 @@ const ContactUs = () => {
       setError(true);
     } else {
       // API Call
-      const response = await fetch(`${host}/api/contact/contact/`, {
+      await fetch(`${host}/api/contact/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -347,6 +347,7 @@ const ContactUs = () => {
           width="100%"
           height="400"
           allowFullScreen=""
+          title="myaddresslocation"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>

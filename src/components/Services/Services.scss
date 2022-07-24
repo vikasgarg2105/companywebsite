@@ -9,12 +9,32 @@
         background: #FFFFFF;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
+        &:hover{
+            background: var(--primary);
+            color: var(--white);
+            h5{
+                color: var(--white);
+            }
+            a{
+                color: var(--white);
+                font-weight: 600;
+            }
+            .service-img{
+                background: var(--white);
+                img {
+                    width: 60%;
+                    filter: brightness(1)invert(0);
+                }
+            } 
+        }
         h5{
             color: var(--primary);
+            font-size: 1.20rem !important;
         }
         a{
             text-decoration: none;
             color: var(--primary);
+            font-weight: 600;
         } 
     }
     .service-img {
@@ -23,7 +43,8 @@
         height: 80px;
         border-radius: 80px;
         img {
-            width: 66%;
+            width: 60%;
+            filter: brightness(0)invert(1);
         }
     }
 }

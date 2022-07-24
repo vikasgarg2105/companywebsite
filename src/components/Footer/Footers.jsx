@@ -5,7 +5,8 @@ import facebook from "../../images/facebook.svg";
 import twitter from "../../images/twitter.svg";
 import instagram from "../../images/instagram.svg";
 import linkedin from "../../images/linkedin.svg";
-import doubleArrow from "../../images/angle-double-right-solid.svg";
+// import doubleArrow from "../../images/angle-double-right-solid.svg";
+import doubleArrow from "../../images/double-angle-right.svg";
 import logoBlack from "../../images/logo-black.svg";
 
 const Footers = () => {

@@ -74,7 +74,7 @@ const Careers = () => {
     let positionValue = item[0].jobTitle;
     setText({ ...text, position: positionValue });
     setModalText({ ...modalText, position: positionValue });
-    setModalSuccess(false)
+    setModalSuccess(false);
   };
   const [text, setText] = useState({
     name: "",
